@@ -18,10 +18,7 @@ RUN set -eux; \
 ENV DRUPAL_VERSION 10.0.0-rc3
 
 RUN set -eux; \
-	export COMPOSER_HOME="$(mktemp -d)"; \
-	composer global require consolidation/robo:^4; \
-	# delete composer cache
-	rm -rf "$COMPOSER_HOME"
+	composer global require consolidation/robo:^4;
 
 ENV PATH=${PATH}:/opt/drupal/vendor/bin
 ENV PATH=${HOME}/.composer/vendor/bin:${PATH}
