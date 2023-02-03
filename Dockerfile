@@ -40,7 +40,7 @@ ENV DRUPAL_VERSION 10.0.0-rc3
 RUN set -eux; \
 	composer global require consolidation/robo:^4;
 
-ENV PATH=/root/.composer/vendor/bin:${PATH}
+ENV PATH=/root/.config/composer/vendor/bin:${PATH}
 
 RUN rm -rf /var/www/html
 
