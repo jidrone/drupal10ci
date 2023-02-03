@@ -12,7 +12,7 @@ RUN set -eux; \
 	wget https://dl-ssl.google.com/linux/linux_signing_key.pub; \
 	apt-key add linux_signing_key.pub; \
 	apt-get update; \
-	apt-get install google-chrome-unstable
+	apt-get install -y google-chrome-unstable
 
 # https://www.drupal.org/node/3060/release
 ENV DRUPAL_VERSION 10.0.0-rc3
