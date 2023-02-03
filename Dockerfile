@@ -2,7 +2,7 @@ FROM drupal:10.0.0-rc3-php8.1-apache-buster
 
 RUN set -eux; \
 	apt-get update; \
-	apt-get install -y zip unzip nano git default-mysql-client
+	apt-get install -y zip unzip nano git wget gnupg2 default-mysql-client
 
 RUN { \
 		echo 'deb http://dl.google.com/linux/chrome/deb/ stable main'; \
