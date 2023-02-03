@@ -2,7 +2,7 @@ FROM drupal:10.0.0-rc3-php8.1-apache-buster
 
 RUN set -eux; \
 	apt-get update; \
-	apt-get install -y zip unzip nano git wget gnupg2 default-mysql-client
+	apt-get install -y zip unzip nano git wget gnupg2 default-mysql-client aptitude
 
 RUN { \
 		echo 'deb http://dl.google.com/linux/chrome/deb/ stable main'; \
@@ -12,7 +12,7 @@ RUN set -eux; \
 	wget https://dl-ssl.google.com/linux/linux_signing_key.pub; \
 	apt-key add linux_signing_key.pub; \
 	apt-get update; \
-	apt-get install -f -y google-chrome-unstable
+	aptitude install -y google-chrome-unstable
 
 # https://www.drupal.org/node/3060/release
 ENV DRUPAL_VERSION 10.0.0-rc3
