@@ -38,8 +38,9 @@ RUN set -eux; \
 # https://www.drupal.org/node/3060/release
 ENV DRUPAL_VERSION 10.0.0-rc3
 
-# Install Gulp.
-RUN npm install gulp-cli gulp -g
+# Install NodeJs.
+RUN curl -sL https://deb.nodesource.com/setup_16.x | bash -
+RUN apt-get install -y nodejs
 
 # Install robo.
 RUN set -eux; \
