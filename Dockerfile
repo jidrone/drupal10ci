@@ -13,6 +13,7 @@ RUN set -eux; \
 	apt-transport-https \
 	ca-certificates \
 	curl \
+	npm \
 	--no-install-recommends
 
 RUN { \
