@@ -38,11 +38,17 @@ RUN set -eux; \
 # https://www.drupal.org/node/3060/release
 ENV DRUPAL_VERSION 10.0.0-rc3
 
+# Install Gulp.
+RUN npm install gulp-cli gulp -g
+
+# Install robo.
 RUN set -eux; \
 	composer global require consolidation/robo:^4;
 
+# Add composer to PATH.
 ENV PATH=/root/.config/composer/vendor/bin:${PATH}
 
+# Remove existing drupal files.
 RUN rm -rf /var/www/html
 
 # vim:set ft=dockerfile:
