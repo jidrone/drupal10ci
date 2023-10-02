@@ -7,13 +7,13 @@ RUN set -eux; \
 	unzip \
 	nano \
 	git \
-	wget \
 	gnupg2 \
 	default-mysql-client \
 	apt-transport-https \
 	ca-certificates \
 	curl \
 	npm \
+	openssh-client \
 	--no-install-recommends
 
 RUN { \
