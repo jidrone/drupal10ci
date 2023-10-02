@@ -7,6 +7,7 @@ RUN set -eux; \
 	unzip \
 	nano \
 	git \
+	wget \
 	gnupg2 \
 	default-mysql-client \
 	apt-transport-https \
