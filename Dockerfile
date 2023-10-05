@@ -38,6 +38,7 @@ RUN set -eux; \
 
 # https://www.drupal.org/node/3060/release
 ENV DRUPAL_VERSION 10.0.0-rc3
+ENV DRUPAL_CI true
 
 # Install NodeJs.
 RUN curl -sL https://deb.nodesource.com/setup_16.x | bash -
