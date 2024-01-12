@@ -1,4 +1,4 @@
-FROM drupal:10.0.0-rc3-php8.1-apache-buster
+FROM drupal:10.2.1-php8.2-apache-bullseye
 
 RUN set -eux; \
 	apt-get update; \
@@ -37,7 +37,7 @@ RUN set -eux; \
 	--no-install-recommends
 
 # https://www.drupal.org/node/3060/release
-ENV DRUPAL_VERSION 10.0.0-rc3
+ENV DRUPAL_VERSION 10.2.1
 ENV DRUPAL_CI true
 
 # Install NodeJs.
