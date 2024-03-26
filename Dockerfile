@@ -36,6 +36,11 @@ RUN set -eux; \
 	fonts-freefont-ttf \
 	--no-install-recommends
 
+# set recommended PHP.ini settings
+RUN { \
+		echo 'memory_limit = 512M'; \
+	} > /usr/local/etc/php/conf.d/docker-fpm.ini
+
 # https://www.drupal.org/node/3060/release
 ENV DRUPAL_VERSION 10.2.1
 ENV DRUPAL_CI true
