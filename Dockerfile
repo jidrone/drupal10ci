@@ -56,6 +56,9 @@ RUN set -eux; \
 # Add composer to PATH.
 ENV PATH=/root/.config/composer/vendor/bin:${PATH}
 
+# Allow composer to run as root.
+ENV COMPOSER_ALLOW_SUPERUSER=1
+
 # Remove existing drupal files.
 RUN rm -rf /var/www/html
 
