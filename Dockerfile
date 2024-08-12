@@ -49,6 +49,10 @@ ENV DRUPAL_CI true
 RUN curl -sL https://deb.nodesource.com/setup_16.x | bash -
 RUN apt-get install -y nodejs
 
+# Install robo.
+RUN set -eux; \
+	composer global require consolidation/robo:^4;
+
 # Add composer to PATH.
 ENV PATH=/root/.config/composer/vendor/bin:${PATH}
 
